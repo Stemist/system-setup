@@ -4,10 +4,13 @@
 # Wire, Firefox, ProtonVPN, 
 
 echo "Updating cache..."
-sudo apt-get update
+sudo dnf update
+
+echo "Updating system..."
+sudo dnf upgrade -y
 
 echo "Installing common software..."
-sudo apt-get install vim i3 nitrogen git htop
+sudo dnf install vim i3 i3status dmenu i3lock xbacklight feh conky nitrogen git htop gufw
 
 echo "Making directories..."
 mkdir /home/quark/Development
